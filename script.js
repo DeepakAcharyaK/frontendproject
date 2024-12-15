@@ -5,6 +5,8 @@ const lenis = new Lenis({
 const menuIcon = document.getElementById('menuIcon');
 const closeIcon = document.getElementById('closeIcon');
 const hamburgerMenu = document.getElementById('hamburgerMenu');
+const cursor=document.querySelector('.cursor');
+const allpagescontainer=document.querySelector('.allpagescontainer');
 
 // Open menu
 menuIcon.addEventListener('click', () => {
@@ -38,4 +40,9 @@ gsap.from('#menuIcon',{
     opacity:0,
     duration:2,
     delay:1
+})
+
+allpagescontainer.addEventListener('mousemove',function(dets){
+    cursor.style.left=dets.x+'px';
+    cursor.style.top=dets.y+'px';
 })
